@@ -4,8 +4,20 @@ function getYearOfBirth(age){
 }
 
 function createGreeting(name, age){
+  try{
+    if (age <= -1){
+      throw new Error("Age can not be negative");
+    }
+    if (name == undefined || age == undefined){
+      throw new Error("Arguments not valid.")
+    }
+
+  }
+  catch (e){
+    return e.message;    
+  }
     let yearOfBirth = getYearOfBirth(age);
     return `Hi, my name is ${name} and I am ${age} years old. I was born in ${yearOfBirth}.`;
 }
 
-createGreeting("Coleen", 26)
+createGreeting("Coleen", )
