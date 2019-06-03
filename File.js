@@ -9,7 +9,10 @@ function createGreeting(name, age){
       throw new Error("Age can not be negative");
     }
     if (name == undefined || age == undefined){
-      throw new Error("Arguments not valid.")
+      throw new Error("Arguments not valid.");
+    }
+    if (name.typeof != "string" || age.typeof != "number" ){
+      throw new Error("Input Types Not Valid");
     }
 
   }
@@ -20,4 +23,4 @@ function createGreeting(name, age){
     return `Hi, my name is ${name} and I am ${age} years old. I was born in ${yearOfBirth}.`;
 }
 
-createGreeting("Coleen", )
+createGreeting("Coleen", "ad" )
